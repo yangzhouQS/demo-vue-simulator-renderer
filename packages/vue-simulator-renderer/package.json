@@ -1,0 +1,67 @@
+{
+  "name": "@knxcloud/lowcode-vue-simulator-renderer",
+  "main": "./dist/vue-simulator-renderer.js",
+  "module": "./dist/vue-simulator-renderer.mjs",
+  "typings": "./dist/vue-simulator-renderer.d.ts",
+  "version": "1.6.0-beta.8",
+  "keywords": [
+    "vue",
+    "lowcode",
+    "lowcode-engine"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {
+    "start": "vue-cli-service serve",
+    "build": "vite build && vite build -c vite.config.umd.ts",
+    "build:watch": "vite build && vite build -c vite.config.umd.ts -w",
+    "lint:type": "tsc -p ./tsconfig.json --noEmit",
+    "prepack": "pnpm build"
+  },
+  "dependencies": {
+    "@knxcloud/lowcode-hooks": "workspace:*",
+    "@knxcloud/lowcode-utils": "workspace:*",
+    "@knxcloud/lowcode-vue-renderer": "workspace:*"
+  },
+  "devDependencies": {
+    "@alilc/lowcode-designer": "^1.1.3",
+    "@alilc/lowcode-types": "^1.1.3",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-typescript": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "vite": "^4.1.4",
+    "vite-plugin-lib-types": "^0.1.2",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "peerDependencies": {
+    "@alilc/lowcode-designer": ">= 1.1.x < 2",
+    "@alilc/lowcode-types": ">= 1.1.x < 2",
+    "vue": ">= 3.x < 4",
+    "vue-router": ">= 4.x < 5"
+  },
+  "peerDependenciesMeta": {
+    "@alilc/lowcode-designer": {
+      "optional": true
+    },
+    "@alilc/lowcode-types": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "http",
+    "url": "https://github.com/KNXCloud/lowcode-engine-vue/tree/main/packages/vue-simulator-renderer"
+  }
+}
