@@ -5,6 +5,7 @@ import LowCodeRenderer from '@knxcloud/lowcode-vue-renderer';
 import { RouterView } from 'vue-router';
 
 export const Layout = defineComponent({
+  name: 'Layout',
   props: {
     simulator: {
       type: Object as PropType<VueSimulatorRenderer>,
@@ -29,6 +30,7 @@ export const Layout = defineComponent({
 });
 
 export const SimulatorRendererView = defineComponent({
+  name: 'SimulatorRendererView',
   props: {
     simulator: {
       type: Object as PropType<VueSimulatorRenderer>,
@@ -42,6 +44,7 @@ export const SimulatorRendererView = defineComponent({
 });
 
 export const Renderer = defineComponent({
+  name: 'Renderer',
   props: {
     simulator: {
       type: Object as PropType<VueSimulatorRenderer>,

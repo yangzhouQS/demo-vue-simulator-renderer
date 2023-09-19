@@ -79,6 +79,7 @@ type VueRendererProps = ExtractPublicPropTypes<typeof vueRendererProps>;
 const splitOptions = createObjectSpliter((prop) => !prop.match(/^[a-z]+([A-Z][a-z]+)*$/));
 
 const VueRenderer = defineComponent({
+  name: 'VueRenderer',
   props: vueRendererProps,
   setup(props, { slots, expose }) {
     const parser = new SchemaParser({

@@ -265,6 +265,8 @@ function createSimulatorRenderer() {
         simulator.createComponent
       ),
     };
+
+    console.log(components.value);
   }
 
   const simulator = reactive({

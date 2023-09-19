@@ -1,7 +1,8 @@
 {
   "name": "@knxcloud/lowcode-vue-renderer",
   "main": "./dist/vue-renderer.js",
-  "module": "./dist/vue-renderer.mjs",
+  "module2": "./dist/vue-renderer.mjs",
+  "module": "./src/index.ts",
   "typings": "./dist/vue-renderer.d.ts",
   "version": "1.6.0-beta.8",
   "keywords": [
@@ -16,6 +17,7 @@
   ],
   "scripts": {
     "build": "vite build && vite build -c vite.config.umd.ts",
+    "build:w": "vite build && vite build -c vite.config.umd.ts -w",
     "lint:type": "tsc -p ./tsconfig.json --noEmit",
     "prepack": "pnpm build"
   },
