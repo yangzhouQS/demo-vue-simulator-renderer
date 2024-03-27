@@ -332,6 +332,8 @@ function createSimulatorRenderer() {
   simulator.getComponent = (componentName) => components.value[componentName];
 
   let createdCount = 0;
+
+  // 根据描述协议创建一个组件返回
   simulator.createComponent = ({ css, ...schema }) => {
     const compId = `Component-${schema.id || createdCount++}`;
     const CreatedComponent = defineComponent({
@@ -369,6 +371,8 @@ function createSimulatorRenderer() {
     }
     return CreatedComponent;
   };
+
+  // 获取某个元素相对于 浏览器视窗（可见区域） 的位置信息
   simulator.getClientRects = (element) => getClientRects(element);
   simulator.setNativeSelection = (enable) => setNativeSelection(enable);
   simulator.setDraggingState = (state) => cursor.setDragging(state);
