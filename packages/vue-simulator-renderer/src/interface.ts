@@ -20,10 +20,11 @@ export type MinxedComponent = NpmInfo | Component | ComponentSchema;
 
 export type ComponentInstance = ComponentPublicInstance;
 
+// docId, nodeId, instance.$.uid
 export interface ComponentRecord {
-  did: string;
-  nid: string;
-  cid: number;
+  did: string; // documentId
+  nid: string; // nodeId
+  cid: number; // xx
 }
 
 export interface SimulatorViewLayout {

@@ -455,6 +455,8 @@ function createSimulatorRenderer() {
   disposeFunctions.push(
     host.autorun(() => {
       const { router } = simulator;
+
+      // 文档
       documentInstances.value = host.project.documents.map((doc) => {
         let documentInstance = documentInstanceMap.get(doc.id);
         if (!documentInstance) {

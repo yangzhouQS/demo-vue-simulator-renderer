@@ -35,13 +35,20 @@ export interface IPublicTypeSimulatorRenderer<Component, ComponentInstance> {
   
   // 获取某个元素相对于 浏览器视窗（可见区域） 的位置信息
   getClientRects(element: Element | Text): DOMRect[];
+  
+  // 鼠标样式模拟
   setNativeSelection(enableFlag: boolean): void;
   setDraggingState(state: boolean): void;
   setCopyState(state: boolean): void;
-  loadAsyncLibrary(asyncMap: { [index: string]: any }): void;
   clearState(): void;
+  
+  
+  // 依赖静态资源加载
+  loadAsyncLibrary(asyncMap: { [index: string]: any }): void;
   stopAutoRepaintNode(): void;
   enableAutoRepaintNode(): void;
+  
+  // 模拟器开始运行
   run(): void;
   load(asset: Asset): Promise<any>;
 }
